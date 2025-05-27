@@ -1,0 +1,181 @@
+<!-- Load Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<style>
+  #leaflet-map {
+    height: 400px;
+    width: 100%;
+    margin-top: 10px;
+  }
+  /* Remove popup padding/margin */
+  .leaflet-popup-content-wrapper {
+    width: 300px;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+  .leaflet-popup-content {
+    margin: 0;
+    padding: 0;
+  }
+  .leaflet-popup-tip-container {
+  display: none;
+  } 
+  /* Style popup image to fill popup exactly */
+  .popup-image {
+    display: block;
+    width: 400px;  /* Adjust size here */
+    height: auto;
+    margin: 0;
+  }
+</style>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<!-- Map container -->
+<div id="leaflet-map"></div>
+
+<!-- Initialize map -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const map = L.map('leaflet-map').setView([32.7373, -117.1715], 13);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    const customIcon1 = L.icon({
+      iconUrl: 'https://images.squarespace-cdn.com/content/678eb6df2bd50376fb90c555/e1d6c25b-a70d-4b32-a54d-63effe897f5e/pin+%232.png?content-type=image%2Fpng',
+      iconSize: [32, 46],
+      iconAnchor: [16, 46],
+      popupAnchor: [0, -46]
+    });
+
+    const popupContent1 = `
+      <img class="popup-image" 
+           src="https://images.squarespace-cdn.com/content/678eb6df2bd50376fb90c555/dce55c04-9da8-46fc-997f-eabb19eb837e/Frame+23.png?content-type=image%2Fpng" 
+           alt="Custom Popup Image" />
+    `;
+
+    const marker1 = L.marker([32.7373, -117.1715], { icon: customIcon1 }).addTo(map);
+    marker1.bindPopup(popupContent1);
+
+    const customIcon2 = L.icon({
+      iconUrl: 'https://images.squarespace-cdn.com/content/678eb6df2bd50376fb90c555/68d1480b-23a4-45f2-812e-18b03419d590/pin+%231.png?content-type=image%2Fpng',
+      iconSize: [32, 46],
+      iconAnchor: [16, 46],
+      popupAnchor: [0, -46]
+    });
+
+    const popupContent2 = `
+      <img class="popup-image" 
+           src="https://images.squarespace-cdn.com/content/678eb6df2bd50376fb90c555/d55d0d53-a990-497e-940d-f9d7ceeb8710/Frame+25.png?content-type=image%2Fpng" 
+           alt="Custom Popup Image" />
+    `;
+
+    const marker2 = L.marker([32.7133, -117.0922], { icon: customIcon2 }).addTo(map);
+    marker2.bindPopup(popupContent2);
+
+    const customIcon3 = L.icon({
+      iconUrl: 'https://images.squarespace-cdn.com/content/678eb6df2bd50376fb90c555/39991058-7c9f-4a65-9e9b-23b3f4ba8776/pin+%233.png?content-type=image%2Fpng',
+      iconSize: [32, 46],
+      iconAnchor: [16, 46],
+      popupAnchor: [0, -46]
+    });
+
+    const popupContent3 = `
+      <img class="popup-image" 
+           src="https://images.squarespace-cdn.com/content/678eb6df2bd50376fb90c555/442da85f-2f24-46c5-9c2a-9185bee6f9ae/Frame+24.png?content-type=image%2Fpng" 
+           alt="Custom Popup Image" />
+    `;
+
+    const marker3 = L.marker([32.7133, -117.1922], { icon: customIcon3 }).addTo(map);
+    marker3.bindPopup(popupContent3);
+
+    const customIcon4 = L.icon({
+      iconUrl: 'https://images.squarespace-cdn.com/content/678eb6df2bd50376fb90c555/838b5600-3aaa-46d9-8b57-9920cd5318ee/pin+%234.png?content-type=image%2Fpng',
+      iconSize: [32, 46],
+      iconAnchor: [16, 46],
+      popupAnchor: [0, -46]
+    });
+
+    const popupContent4 = `
+      <img class="popup-image" 
+           src="https://images.squarespace-cdn.com/content/678eb6df2bd50376fb90c555/9ef22fb4-c059-4b8c-8bed-472923ddb5a4/Frame+26.png?content-type=image%2Fpng" 
+           alt="Custom Popup Image" />
+    `;
+
+    const marker4 = L.marker([32.7133, -117.1022], { icon: customIcon4 }).addTo(map);
+    marker4.bindPopup(popupContent4);
+
+    const customIcon5 = L.icon({
+      iconUrl: 'https://images.squarespace-cdn.com/content/678eb6df2bd50376fb90c555/7d1e97f9-65c6-4f51-9ffd-70c761ccdf7d/pin+%235.png?content-type=image%2Fpng',
+      iconSize: [32, 46],
+      iconAnchor: [16, 46],
+      popupAnchor: [0, -46]
+    });
+
+    const popupContent5 = `
+      <img class="popup-image" 
+           src="https://images.squarespace-cdn.com/content/678eb6df2bd50376fb90c555/5f2b0a71-d3d9-455b-822e-978db151d5d8/Frame+34.png?content-type=image%2Fpng" 
+           alt="Custom Popup Image" />
+    `;
+
+    const marker5 = L.marker([32.7233, -117.1022], { icon: customIcon5 }).addTo(map);
+    marker5.bindPopup(popupContent5);
+
+    const popupContent6 = `
+      <img class="popup-image" 
+           src="https://images.squarespace-cdn.com/content/678eb6df2bd50376fb90c555/83302f9d-16c6-4996-a5ce-7a2012ca3b8a/Frame+41.png?content-type=image%2Fpng" 
+           alt="Custom Popup Image" />
+    `;
+
+    const marker6 = L.marker([32.7243, -117.1032], { icon: customIcon3 }).addTo(map);
+    marker6.bindPopup(popupContent6);
+
+    const popupContent7= `
+      <img class="popup-image" 
+           src="https://images.squarespace-cdn.com/content/678eb6df2bd50376fb90c555/20eccf41-7458-441f-b138-5f5d38304dd7/Frame+39.png?content-type=image%2Fpng" 
+           alt="Custom Popup Image" />
+    `;
+
+    const marker7 = L.marker([32.7213, -117.1132], { icon: customIcon1 }).addTo(map);
+    marker7.bindPopup(popupContent7);
+
+    const popupContent8= `
+      <img class="popup-image" 
+           src="https://images.squarespace-cdn.com/content/678eb6df2bd50376fb90c555/63c04d34-c5fb-4923-be32-bc363a18972f/Frame+37.png?content-type=image%2Fpng" 
+           alt="Custom Popup Image" />
+    `;
+
+    const marker8 = L.marker([32.7218, -117.1232], { icon: customIcon4 }).addTo(map);
+    marker8.bindPopup(popupContent8);
+    
+    const popupContent9= `
+      <img class="popup-image" 
+           src="https://images.squarespace-cdn.com/content/678eb6df2bd50376fb90c555/ff8a4de3-c138-4b57-b62d-488300b0fcc9/Frame+40.png?content-type=image%2Fpng" 
+           alt="Custom Popup Image" />
+    `;
+
+    const marker9 = L.marker([32.7219, -117.1152], { icon: customIcon1 }).addTo(map);
+    marker9.bindPopup(popupContent9);
+
+    const popupContent10= `
+      <img class="popup-image" 
+           src="https://images.squarespace-cdn.com/content/678eb6df2bd50376fb90c555/92565d34-897a-48e7-935d-b8e0f94e25da/Frame+38.png?content-type=image%2Fpng" 
+           alt="Custom Popup Image" />
+    `;
+
+    const marker10 = L.marker([32.7013, -117.1132], { icon: customIcon4 }).addTo(map);
+    marker10.bindPopup(popupContent10);
+
+    const popupContent11= `
+      <img class="popup-image" 
+           src="https://images.squarespace-cdn.com/content/678eb6df2bd50376fb90c555/c3fae7c7-87ef-4a49-8f84-e842590bc468/Frame+42.png?content-type=image%2Fpng" 
+           alt="Custom Popup Image" />
+    `;
+
+    const marker11 = L.marker([32.7413, -117.1022], { icon: customIcon3 }).addTo(map);
+    marker11.bindPopup(popupContent11);
+  });
+</script>
