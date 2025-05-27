@@ -1,0 +1,35 @@
+<style>
+  .image-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .image-container img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.6s ease-in-out;
+  }
+
+  .image2 {
+    opacity: 0;
+  }
+
+  .image-container:hover .image2 {
+    opacity: 1;
+  }
+
+  .image-container:hover .image1 {
+    opacity: 0;
+  }
+</style>
+
+<div class="image-container">
+  <img src="https://images.squarespace-cdn.com/content/678eb6df2bd50376fb90c555/22da091d-1fb7-4346-a597-1716fda27300/Middle+Piece+2.png?content-type=image%2Fpng" class="image2" alt="Puzzle Piece 2">
+  
+  <img src="https://images.squarespace-cdn.com/content/678eb6df2bd50376fb90c555/c3ea0d0e-09e2-4969-84a6-b5d753f780f7/Middle+Piece+1.PNG?content-type=image%2Fpng" class="image1" alt="Puzzle Piece 1">
+</div>
